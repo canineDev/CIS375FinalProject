@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Dev\\CIS375FinalProject\\CIS375Final\\",
+  "WorkspaceRootPath": "C:\\Dev\\CIS375FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4397FDF0-900E-4ABC-AD10-15E0D27A2A64}|CIS375Final.csproj|c:\\dev\\cis375finalproject\\cis375final\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4397FDF0-900E-4ABC-AD10-15E0D27A2A64}|CIS375Final.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4397FDF0-900E-4ABC-AD10-15E0D27A2A64}|CIS375Final.csproj|c:\\dev\\cis375finalproject\\cocomo estimation assistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4397FDF0-900E-4ABC-AD10-15E0D27A2A64}|CIS375Final.csproj|solutionrelative:cocomo estimation assistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4397FDF0-900E-4ABC-AD10-15E0D27A2A64}|CIS375Final.csproj|c:\\dev\\cis375finalproject\\cocomo estimation assistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4397FDF0-900E-4ABC-AD10-15E0D27A2A64}|CIS375Final.csproj|solutionrelative:cocomo estimation assistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,19 +17,38 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 323,
+          "DockedWidth": 490,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Dev\\CIS375FinalProject\\CIS375Final\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Dev\\CIS375FinalProject\\CIS375Final\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "Title": "COCOMO Estimation Assistant.cs",
+              "DocumentMoniker": "C:\\Dev\\CIS375FinalProject\\COCOMO Estimation Assistant.cs",
+              "RelativeDocumentMoniker": "COCOMO Estimation Assistant.cs",
+              "ToolTip": "C:\\Dev\\CIS375FinalProject\\COCOMO Estimation Assistant.cs",
+              "RelativeToolTip": "COCOMO Estimation Assistant.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T15:11:52.033Z",
+              "WhenOpened": "2026-04-18T15:25:58.937Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 156,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "COCOMO Estimation Assistant.cs [Design]",
+              "DocumentMoniker": "C:\\Dev\\CIS375FinalProject\\COCOMO Estimation Assistant.cs",
+              "RelativeDocumentMoniker": "COCOMO Estimation Assistant.cs",
+              "ToolTip": "C:\\Dev\\CIS375FinalProject\\COCOMO Estimation Assistant.cs [Design]",
+              "RelativeToolTip": "COCOMO Estimation Assistant.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T18:41:19.772Z",
               "EditorCaption": " [Design]"
             }
           ]
