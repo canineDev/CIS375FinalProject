@@ -1,6 +1,6 @@
 namespace CIS375Final
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         public class ModeCoefficients
         {
@@ -19,7 +19,7 @@ namespace CIS375Final
             Embedded
         };
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }

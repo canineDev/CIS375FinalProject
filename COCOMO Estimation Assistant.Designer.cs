@@ -1,6 +1,6 @@
 ﻿namespace CIS375Final
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -117,7 +117,7 @@
             label6.Size = new Size(0, 25);
             label6.TabIndex = 8;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -131,7 +131,7 @@
             Controls.Add(label1);
             Controls.Add(comboBox1);
             Controls.Add(textBox1);
-            Name = "Form1";
+            Name = "MainForm";
             Text = "COCOMO Estimation Assistant";
             ResumeLayout(false);
             PerformLayout();
