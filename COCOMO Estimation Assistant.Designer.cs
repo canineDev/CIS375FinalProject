@@ -44,20 +44,20 @@
             IDVTab = new TabPage();
             userInquiriesNum = new TextBox();
             CWTab = new TabPage();
-            comboBox14 = new ComboBox();
-            comboBox13 = new ComboBox();
-            comboBox12 = new ComboBox();
-            comboBox11 = new ComboBox();
-            comboBox10 = new ComboBox();
-            comboBox9 = new ComboBox();
-            comboBox8 = new ComboBox();
-            comboBox7 = new ComboBox();
-            comboBox6 = new ComboBox();
-            comboBox5 = new ComboBox();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            QuestionFourteenComboBox = new ComboBox();
+            QuestionThirteenComboBox = new ComboBox();
+            QuestionTwelveComboBox = new ComboBox();
+            QuestionElevenComboBox = new ComboBox();
+            QuestionTenComboBox = new ComboBox();
+            QuestionNineComboBox = new ComboBox();
+            QuestionEightComboBox = new ComboBox();
+            QuestionSevenComboBox = new ComboBox();
+            QuestionSixComboBox = new ComboBox();
+            QuestionFiveComboBox = new ComboBox();
+            QuestionFourComboBox = new ComboBox();
+            QuestionThreeComboBox = new ComboBox();
+            QuestionTwoComboBox = new ComboBox();
+            QuestionOneComboBox = new ComboBox();
             QuestionFourteenLabel = new Label();
             QuestionThirteenLabel = new Label();
             QuestionTwelveLabel = new Label();
@@ -89,7 +89,7 @@
             DurationTextBox = new TextBox();
             CalculateButton = new Button();
             WeightFactorLabel = new Label();
-            textBox3 = new TextBox();
+            WeightFactorTextBox = new TextBox();
             COCOMOTabControl.SuspendLayout();
             IDVTab.SuspendLayout();
             CWTab.SuspendLayout();
@@ -241,20 +241,20 @@
             // 
             // CWTab
             // 
-            CWTab.Controls.Add(comboBox14);
-            CWTab.Controls.Add(comboBox13);
-            CWTab.Controls.Add(comboBox12);
-            CWTab.Controls.Add(comboBox11);
-            CWTab.Controls.Add(comboBox10);
-            CWTab.Controls.Add(comboBox9);
-            CWTab.Controls.Add(comboBox8);
-            CWTab.Controls.Add(comboBox7);
-            CWTab.Controls.Add(comboBox6);
-            CWTab.Controls.Add(comboBox5);
-            CWTab.Controls.Add(comboBox4);
-            CWTab.Controls.Add(comboBox3);
-            CWTab.Controls.Add(comboBox2);
-            CWTab.Controls.Add(comboBox1);
+            CWTab.Controls.Add(QuestionFourteenComboBox);
+            CWTab.Controls.Add(QuestionThirteenComboBox);
+            CWTab.Controls.Add(QuestionTwelveComboBox);
+            CWTab.Controls.Add(QuestionElevenComboBox);
+            CWTab.Controls.Add(QuestionTenComboBox);
+            CWTab.Controls.Add(QuestionNineComboBox);
+            CWTab.Controls.Add(QuestionEightComboBox);
+            CWTab.Controls.Add(QuestionSevenComboBox);
+            CWTab.Controls.Add(QuestionSixComboBox);
+            CWTab.Controls.Add(QuestionFiveComboBox);
+            CWTab.Controls.Add(QuestionFourComboBox);
+            CWTab.Controls.Add(QuestionThreeComboBox);
+            CWTab.Controls.Add(QuestionTwoComboBox);
+            CWTab.Controls.Add(QuestionOneComboBox);
             CWTab.Controls.Add(QuestionFourteenLabel);
             CWTab.Controls.Add(QuestionThirteenLabel);
             CWTab.Controls.Add(QuestionTwelveLabel);
@@ -277,131 +277,145 @@
             CWTab.Text = "Complexity Weights";
             CWTab.UseVisualStyleBackColor = true;
             // 
-            // comboBox14
+            // QuestionFourteenComboBox
             // 
-            comboBox14.FormattingEnabled = true;
-            comboBox14.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox14.Location = new Point(521, 860);
-            comboBox14.Name = "comboBox14";
-            comboBox14.Size = new Size(182, 33);
-            comboBox14.TabIndex = 27;
+            QuestionFourteenComboBox.FormattingEnabled = true;
+            QuestionFourteenComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionFourteenComboBox.Location = new Point(521, 860);
+            QuestionFourteenComboBox.Name = "QuestionFourteenComboBox";
+            QuestionFourteenComboBox.Size = new Size(182, 33);
+            QuestionFourteenComboBox.TabIndex = 27;
+            QuestionFourteenComboBox.SelectedIndex = 0;
             // 
-            // comboBox13
+            // QuestionThirteenComboBox
             // 
-            comboBox13.FormattingEnabled = true;
-            comboBox13.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox13.Location = new Point(521, 778);
-            comboBox13.Name = "comboBox13";
-            comboBox13.Size = new Size(182, 33);
-            comboBox13.TabIndex = 26;
+            QuestionThirteenComboBox.FormattingEnabled = true;
+            QuestionThirteenComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionThirteenComboBox.Location = new Point(521, 778);
+            QuestionThirteenComboBox.Name = "QuestionThirteenComboBox";
+            QuestionThirteenComboBox.Size = new Size(182, 33);
+            QuestionThirteenComboBox.TabIndex = 26;
+            QuestionThirteenComboBox.SelectedIndex = 0;
             // 
-            // comboBox12
+            // QuestionTwelveComboBox
             // 
-            comboBox12.FormattingEnabled = true;
-            comboBox12.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox12.Location = new Point(521, 714);
-            comboBox12.Name = "comboBox12";
-            comboBox12.Size = new Size(182, 33);
-            comboBox12.TabIndex = 25;
+            QuestionTwelveComboBox.FormattingEnabled = true;
+            QuestionTwelveComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionTwelveComboBox.Location = new Point(521, 714);
+            QuestionTwelveComboBox.Name = "QuestionTwelveComboBox";
+            QuestionTwelveComboBox.Size = new Size(182, 33);
+            QuestionTwelveComboBox.TabIndex = 25;
+            QuestionTwelveComboBox.SelectedIndex = 0;
             // 
-            // comboBox11
+            // QuestionElevenComboBox
             // 
-            comboBox11.FormattingEnabled = true;
-            comboBox11.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox11.Location = new Point(521, 658);
-            comboBox11.Name = "comboBox11";
-            comboBox11.Size = new Size(182, 33);
-            comboBox11.TabIndex = 24;
+            QuestionElevenComboBox.FormattingEnabled = true;
+            QuestionElevenComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionElevenComboBox.Location = new Point(521, 658);
+            QuestionElevenComboBox.Name = "QuestionElevenComboBox";
+            QuestionElevenComboBox.Size = new Size(182, 33);
+            QuestionElevenComboBox.TabIndex = 24;
+            QuestionElevenComboBox.SelectedIndex = 0;
             // 
-            // comboBox10
+            // QuestionTenComboBox
             // 
-            comboBox10.FormattingEnabled = true;
-            comboBox10.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox10.Location = new Point(521, 602);
-            comboBox10.Name = "comboBox10";
-            comboBox10.Size = new Size(182, 33);
-            comboBox10.TabIndex = 23;
+            QuestionTenComboBox.FormattingEnabled = true;
+            QuestionTenComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionTenComboBox.Location = new Point(521, 602);
+            QuestionTenComboBox.Name = "QuestionTenComboBox";
+            QuestionTenComboBox.Size = new Size(182, 33);
+            QuestionTenComboBox.TabIndex = 23;
+            QuestionTenComboBox.SelectedIndex = 0;
             // 
-            // comboBox9
+            // QuestionNineComboBox
             // 
-            comboBox9.FormattingEnabled = true;
-            comboBox9.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox9.Location = new Point(521, 547);
-            comboBox9.Name = "comboBox9";
-            comboBox9.Size = new Size(182, 33);
-            comboBox9.TabIndex = 22;
+            QuestionNineComboBox.FormattingEnabled = true;
+            QuestionNineComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionNineComboBox.Location = new Point(521, 547);
+            QuestionNineComboBox.Name = "QuestionNineComboBox";
+            QuestionNineComboBox.Size = new Size(182, 33);
+            QuestionNineComboBox.TabIndex = 22;
+            QuestionNineComboBox.SelectedIndex = 0;
             // 
-            // comboBox8
+            // QuestionEightComboBox
             // 
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox8.Location = new Point(521, 481);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new Size(182, 33);
-            comboBox8.TabIndex = 21;
+            QuestionEightComboBox.FormattingEnabled = true;
+            QuestionEightComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionEightComboBox.Location = new Point(521, 481);
+            QuestionEightComboBox.Name = "QuestionEightComboBox";
+            QuestionEightComboBox.Size = new Size(182, 33);
+            QuestionEightComboBox.TabIndex = 21;
+            QuestionEightComboBox.SelectedIndex = 0;
             // 
-            // comboBox7
+            // QuestionSevenComboBox
             // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox7.Location = new Point(521, 403);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(182, 33);
-            comboBox7.TabIndex = 20;
+            QuestionSevenComboBox.FormattingEnabled = true;
+            QuestionSevenComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionSevenComboBox.Location = new Point(521, 403);
+            QuestionSevenComboBox.Name = "QuestionSevenComboBox";
+            QuestionSevenComboBox.Size = new Size(182, 33);
+            QuestionSevenComboBox.TabIndex = 20;
+            QuestionSevenComboBox.SelectedIndex = 0;
             // 
-            // comboBox6
+            // QuestionSixComboBox
             // 
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox6.Location = new Point(521, 353);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(182, 33);
-            comboBox6.TabIndex = 19;
+            QuestionSixComboBox.FormattingEnabled = true;
+            QuestionSixComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionSixComboBox.Location = new Point(521, 353);
+            QuestionSixComboBox.Name = "QuestionSixComboBox";
+            QuestionSixComboBox.Size = new Size(182, 33);
+            QuestionSixComboBox.TabIndex = 19;
+            QuestionSixComboBox.SelectedIndex = 0;
             // 
-            // comboBox5
+            // QuestionFiveComboBox
             // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox5.Location = new Point(521, 278);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(182, 33);
-            comboBox5.TabIndex = 18;
+            QuestionFiveComboBox.FormattingEnabled = true;
+            QuestionFiveComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionFiveComboBox.Location = new Point(521, 278);
+            QuestionFiveComboBox.Name = "QuestionFiveComboBox";
+            QuestionFiveComboBox.Size = new Size(182, 33);
+            QuestionFiveComboBox.TabIndex = 18;
+            QuestionFiveComboBox.SelectedIndex = 0;
             // 
-            // comboBox4
+            // QuestionFourComboBox
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox4.Location = new Point(521, 234);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(182, 33);
-            comboBox4.TabIndex = 17;
+            QuestionFourComboBox.FormattingEnabled = true;
+            QuestionFourComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionFourComboBox.Location = new Point(521, 234);
+            QuestionFourComboBox.Name = "QuestionFourComboBox";
+            QuestionFourComboBox.Size = new Size(182, 33);
+            QuestionFourComboBox.TabIndex = 17;
+            QuestionFourComboBox.SelectedIndex = 0;
             // 
-            // comboBox3
+            // QuestionThreeComboBox
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox3.Location = new Point(521, 168);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(182, 33);
-            comboBox3.TabIndex = 16;
+            QuestionThreeComboBox.FormattingEnabled = true;
+            QuestionThreeComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionThreeComboBox.Location = new Point(521, 168);
+            QuestionThreeComboBox.Name = "QuestionThreeComboBox";
+            QuestionThreeComboBox.Size = new Size(182, 33);
+            QuestionThreeComboBox.TabIndex = 16;
+            QuestionThreeComboBox.SelectedIndex = 0;
             // 
-            // comboBox2
+            // QuestionTwoComboBox
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox2.Location = new Point(521, 103);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(182, 33);
-            comboBox2.TabIndex = 15;
+            QuestionTwoComboBox.FormattingEnabled = true;
+            QuestionTwoComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionTwoComboBox.Location = new Point(521, 103);
+            QuestionTwoComboBox.Name = "QuestionTwoComboBox";
+            QuestionTwoComboBox.Size = new Size(182, 33);
+            QuestionTwoComboBox.TabIndex = 15;
+            QuestionTwoComboBox.SelectedIndex = 0;
             // 
-            // comboBox1
+            // QuestionOneComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox1.Location = new Point(521, 39);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 14;
+            QuestionOneComboBox.FormattingEnabled = true;
+            QuestionOneComboBox.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            QuestionOneComboBox.Location = new Point(521, 39);
+            QuestionOneComboBox.Name = "QuestionOneComboBox";
+            QuestionOneComboBox.Size = new Size(182, 33);
+            QuestionOneComboBox.TabIndex = 14;
+            QuestionOneComboBox.SelectedIndex = 0;
             // 
             // QuestionFourteenLabel
             // 
@@ -693,20 +707,20 @@
             WeightFactorLabel.TabIndex = 33;
             WeightFactorLabel.Text = "Weight Factor:";
             // 
-            // textBox3
+            // WeightFactorTextBox
             // 
-            textBox3.Location = new Point(640, 1417);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(150, 31);
-            textBox3.TabIndex = 34;
+            WeightFactorTextBox.Location = new Point(640, 1417);
+            WeightFactorTextBox.Name = "WeightFactorTextBox";
+            WeightFactorTextBox.ReadOnly = true;
+            WeightFactorTextBox.Size = new Size(150, 31);
+            WeightFactorTextBox.TabIndex = 34;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2184, 1482);
-            Controls.Add(textBox3);
+            Controls.Add(WeightFactorTextBox);
             Controls.Add(WeightFactorLabel);
             Controls.Add(CalculateButton);
             Controls.Add(DurationTextBox);
@@ -778,21 +792,21 @@
         private Label QuestionFourteenLabel;
         private Label QuestionThirteenLabel;
         private Label WeightFactorLabel;
-        private TextBox textBox3;
-        private ComboBox comboBox14;
-        private ComboBox comboBox13;
-        private ComboBox comboBox12;
-        private ComboBox comboBox11;
-        private ComboBox comboBox10;
-        private ComboBox comboBox9;
-        private ComboBox comboBox8;
-        private ComboBox comboBox7;
-        private ComboBox comboBox6;
-        private ComboBox comboBox5;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private TextBox WeightFactorTextBox;
+        private ComboBox QuestionFourteenComboBox;
+        private ComboBox QuestionThirteenComboBox;
+        private ComboBox QuestionTwelveComboBox;
+        private ComboBox QuestionElevenComboBox;
+        private ComboBox QuestionTenComboBox;
+        private ComboBox QuestionNineComboBox;
+        private ComboBox QuestionEightComboBox;
+        private ComboBox QuestionSevenComboBox;
+        private ComboBox QuestionSixComboBox;
+        private ComboBox QuestionFiveComboBox;
+        private ComboBox QuestionFourComboBox;
+        private ComboBox QuestionThreeComboBox;
+        private ComboBox QuestionTwoComboBox;
+        private ComboBox QuestionOneComboBox;
         private Label ProjectTypeLabel;
         private ComboBox comboBox15;
         private Label ProgrammingLanguageLabel;

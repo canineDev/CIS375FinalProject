@@ -31,12 +31,13 @@ namespace CIS375Final
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            CalculateInformationDomainValues(sender, e);
+            CalculateInformationDomainValues();
+            CalculateComplexityWeightValues();
 
             WriteInfoToBoxes();
         }
 
-        private void CalculateInformationDomainValues(object sender, EventArgs e)
+        private void CalculateInformationDomainValues()
         {
             int[] userValues = new int[5];
 
@@ -89,8 +90,38 @@ namespace CIS375Final
             IDVCount = totalCount;
         }
 
+        private void CalculateComplexityWeightValues()
+        {
+            int[] complexityWeights = new int[14];
+            complexityWeights[0] = QuestionOneComboBox.SelectedIndex;
+            complexityWeights[1] = QuestionTwoComboBox.SelectedIndex;
+            complexityWeights[2] = QuestionThreeComboBox.SelectedIndex;
+            complexityWeights[3] = QuestionFourComboBox.SelectedIndex;
+            complexityWeights[4] = QuestionFiveComboBox.SelectedIndex;
+            complexityWeights[5] = QuestionSixComboBox.SelectedIndex;
+            complexityWeights[6] = QuestionSevenComboBox.SelectedIndex;
+            complexityWeights[7] = QuestionEightComboBox.SelectedIndex;
+            complexityWeights[8] = QuestionNineComboBox.SelectedIndex;
+            complexityWeights[9] = QuestionTenComboBox.SelectedIndex;
+            complexityWeights[10] = QuestionElevenComboBox.SelectedIndex;
+            complexityWeights[11] = QuestionTwelveComboBox.SelectedIndex;
+            complexityWeights[12] = QuestionThirteenComboBox.SelectedIndex;
+            complexityWeights[13] = QuestionFourteenComboBox.SelectedIndex;
+
+            int totalWeightFactor = 0;
+            for(int i  = 0; i < complexityWeights.Length; i++)
+            {
+                if (complexityWeights[i] < 0) return; //ensures that all have been selected
+
+                totalWeightFactor += complexityWeights[i];
+            }
+
+            WeightFactor = totalWeightFactor;
+        }
+
         private void WriteInfoToBoxes()
         {
+            // IDV Count
             if (IDVCount != -1)
             {
                 IDVCountTextBox.Text = IDVCount.ToString();
@@ -98,6 +129,16 @@ namespace CIS375Final
             else
             {
                 IDVCountTextBox.Text = "N/A";
+            }
+
+            // Weight Factor
+            if (WeightFactor > -1)
+            {
+                WeightFactorTextBox.Text = WeightFactor.ToString();
+            }
+            else
+            {
+                WeightFactorTextBox.Text = "N/A";
             }
         }
 
