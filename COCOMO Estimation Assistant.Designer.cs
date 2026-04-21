@@ -42,8 +42,10 @@
             weightComboBox = new ComboBox();
             COCOMOTabControl = new TabControl();
             IDVTab = new TabPage();
+            IDVHelpButton = new Button();
             userInquiriesNum = new TextBox();
             CWTab = new TabPage();
+            CWHelpButton = new Button();
             QuestionFourteenComboBox = new ComboBox();
             QuestionThirteenComboBox = new ComboBox();
             QuestionTwelveComboBox = new ComboBox();
@@ -73,6 +75,7 @@
             QuestionTwoLabel = new Label();
             QuestionOneLabel = new Label();
             ProjectInfoTab = new TabPage();
+            PIHelpButton = new Button();
             projectTypeComboBox = new ComboBox();
             ProjectTypeLabel = new Label();
             programmingLanguageComboBox = new ComboBox();
@@ -104,7 +107,6 @@
             button2.TabIndex = 9;
             button2.Text = "help";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // userInputsNumLabel
             // 
@@ -212,6 +214,7 @@
             // 
             // IDVTab
             // 
+            IDVTab.Controls.Add(IDVHelpButton);
             IDVTab.Controls.Add(userInquiriesNum);
             IDVTab.Controls.Add(userInputsNumLabel);
             IDVTab.Controls.Add(weightComboBox);
@@ -232,6 +235,16 @@
             IDVTab.Text = "Information Domain Values";
             IDVTab.UseVisualStyleBackColor = true;
             // 
+            // IDVHelpButton
+            // 
+            IDVHelpButton.Location = new Point(2110, 6);
+            IDVHelpButton.Name = "IDVHelpButton";
+            IDVHelpButton.Size = new Size(58, 34);
+            IDVHelpButton.TabIndex = 23;
+            IDVHelpButton.Text = "help";
+            IDVHelpButton.UseVisualStyleBackColor = true;
+            IDVHelpButton.Click += IDVHelpButton_Click;
+            // 
             // userInquiriesNum
             // 
             userInquiriesNum.Location = new Point(280, 133);
@@ -241,6 +254,7 @@
             // 
             // CWTab
             // 
+            CWTab.Controls.Add(CWHelpButton);
             CWTab.Controls.Add(QuestionFourteenComboBox);
             CWTab.Controls.Add(QuestionThirteenComboBox);
             CWTab.Controls.Add(QuestionTwelveComboBox);
@@ -276,6 +290,16 @@
             CWTab.TabIndex = 1;
             CWTab.Text = "Complexity Weights";
             CWTab.UseVisualStyleBackColor = true;
+            // 
+            // CWHelpButton
+            // 
+            CWHelpButton.Location = new Point(2110, 6);
+            CWHelpButton.Name = "CWHelpButton";
+            CWHelpButton.Size = new Size(58, 34);
+            CWHelpButton.TabIndex = 28;
+            CWHelpButton.Text = "help";
+            CWHelpButton.UseVisualStyleBackColor = true;
+            CWHelpButton.Click += CWHelpButton_Click;
             // 
             // QuestionFourteenComboBox
             // 
@@ -540,6 +564,7 @@
             // 
             // ProjectInfoTab
             // 
+            ProjectInfoTab.Controls.Add(PIHelpButton);
             ProjectInfoTab.Controls.Add(projectTypeComboBox);
             ProjectInfoTab.Controls.Add(ProjectTypeLabel);
             ProjectInfoTab.Controls.Add(programmingLanguageComboBox);
@@ -551,6 +576,16 @@
             ProjectInfoTab.TabIndex = 2;
             ProjectInfoTab.Text = "Project Info";
             ProjectInfoTab.UseVisualStyleBackColor = true;
+            // 
+            // PIHelpButton
+            // 
+            PIHelpButton.Location = new Point(2110, 6);
+            PIHelpButton.Name = "PIHelpButton";
+            PIHelpButton.Size = new Size(58, 34);
+            PIHelpButton.TabIndex = 24;
+            PIHelpButton.Text = "help";
+            PIHelpButton.UseVisualStyleBackColor = true;
+            PIHelpButton.Click += PIHelpButton_Click;
             // 
             // projectTypeComboBox
             // 
@@ -797,5 +832,8 @@
         private ComboBox programmingLanguageComboBox;
         private Label ProgrammingLanguageLabel;
         private ComboBox projectTypeComboBox;
+        private Button IDVHelpButton;
+        private Button CWHelpButton;
+        private Button PIHelpButton;
     }
 }

@@ -65,7 +65,7 @@ namespace CIS375Final
             int[] userValues = new int[5];
 
             // Get textbox results
-            if(!int.TryParse(userInputsNum.Text, out userValues[0]))
+            if (!int.TryParse(userInputsNum.Text, out userValues[0]))
             {
                 return;
             }
@@ -106,7 +106,7 @@ namespace CIS375Final
             }
 
             int totalCount = 0;
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 totalCount += weightValues[i] * userValues[i];
             }
@@ -132,7 +132,7 @@ namespace CIS375Final
             complexityWeights[13] = QuestionFourteenComboBox.SelectedIndex;
 
             int totalWeightFactor = 0;
-            for(int i  = 0; i < complexityWeights.Length; i++)
+            for (int i = 0; i < complexityWeights.Length; i++)
             {
                 if (complexityWeights[i] < 0) return; //ensures that all have been selected
 
@@ -150,7 +150,7 @@ namespace CIS375Final
         private void CalculateProjectInfoValues()
         {
             int avgLOC = -1;
-            switch(programmingLanguageComboBox.SelectedIndex)
+            switch (programmingLanguageComboBox.SelectedIndex)
             {
                 case 0:
                     avgLOC = 320;
@@ -211,13 +211,13 @@ namespace CIS375Final
 
         private void CalculateEffort()
         {
-            float effort = mc.a * (float)Math.Pow(LOCPerFP/1000, mc.b);
+            float effort = mc.a * (float)Math.Pow(LOCPerFP / 1000, mc.b);
             Effort = effort;
 
             float duration = mc.c * (float)Math.Pow(Effort, mc.d);
             Duration = duration;
         }
-        
+
         private void WriteInfoToBoxes()
         {
             // IDV Count
@@ -287,6 +287,38 @@ namespace CIS375Final
             mc.b = b;
             mc.c = c;
             mc.d = d;
+        }
+
+        private void IDVHelpButton_Click(object sender, EventArgs e)
+        {
+            string helpText = string.Empty;
+
+            helpText += "1. Input your project information in each textbox\n";
+            helpText += "2. Select the weight factor in the dropdown menu\n";
+            helpText += "3. Click the calculate button to see your information domain values count\n";
+
+            MessageBox.Show(helpText, "Information Domain Value Help", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void CWHelpButton_Click(object sender, EventArgs e)
+        {
+            string helpText = string.Empty;
+
+            helpText += "1. Answer each question for the complexity weight of each topic\n";
+            helpText += "2. Click the calculate button to see your weight factor and # of function points\n";
+
+            MessageBox.Show(helpText, "Complexity Weight Help", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void PIHelpButton_Click(object sender, EventArgs e)
+        {
+            string helpText = string.Empty;
+
+            helpText += "1. Select the programming language you are using in the project in the dropdown menu\n";
+            helpText += "2. Select the project type in the dropdown window\n";
+            helpText += "3. Click the calculate button to see the LOC/FP value, effort value, and duration values\n";
+
+            MessageBox.Show(helpText, "Project Info Help", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }
