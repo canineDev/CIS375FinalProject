@@ -201,10 +201,10 @@
             // 
             // COCOMOTabControl
             // 
+            COCOMOTabControl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             COCOMOTabControl.Controls.Add(IDVTab);
             COCOMOTabControl.Controls.Add(CWTab);
             COCOMOTabControl.Controls.Add(ProjectInfoTab);
-            COCOMOTabControl.Dock = DockStyle.Top;
             COCOMOTabControl.Location = new Point(0, 0);
             COCOMOTabControl.Name = "COCOMOTabControl";
             COCOMOTabControl.Padding = new Point(6, 20);
@@ -237,6 +237,7 @@
             // 
             // IDVHelpButton
             // 
+            IDVHelpButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             IDVHelpButton.Location = new Point(2110, 6);
             IDVHelpButton.Name = "IDVHelpButton";
             IDVHelpButton.Size = new Size(58, 34);
@@ -579,6 +580,7 @@
             // 
             // PIHelpButton
             // 
+            PIHelpButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             PIHelpButton.Location = new Point(2110, 6);
             PIHelpButton.Name = "PIHelpButton";
             PIHelpButton.Size = new Size(58, 34);
