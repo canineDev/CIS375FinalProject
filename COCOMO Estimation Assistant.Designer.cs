@@ -42,8 +42,29 @@
             weightComboBox = new ComboBox();
             COCOMOTabControl = new TabControl();
             IDVTab = new TabPage();
-            textBox1 = new TextBox();
+            userInquiriesNum = new TextBox();
             CWTab = new TabPage();
+            comboBox14 = new ComboBox();
+            comboBox13 = new ComboBox();
+            comboBox12 = new ComboBox();
+            comboBox11 = new ComboBox();
+            comboBox10 = new ComboBox();
+            comboBox9 = new ComboBox();
+            comboBox8 = new ComboBox();
+            comboBox7 = new ComboBox();
+            comboBox6 = new ComboBox();
+            comboBox5 = new ComboBox();
+            comboBox4 = new ComboBox();
+            comboBox3 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            QuestionFourteenLabel = new Label();
+            QuestionThirteenLabel = new Label();
+            QuestionTwelveLabel = new Label();
+            QuestionElevenLabel = new Label();
+            QuestionTenLabel = new Label();
+            QuestionNineLabel = new Label();
+            QuestionEightLabel = new Label();
             QuestionSevenLabel = new Label();
             QuestionSixLabel = new Label();
             QuestionFiveLabel = new Label();
@@ -52,6 +73,10 @@
             QuestionTwoLabel = new Label();
             QuestionOneLabel = new Label();
             ProjectInfoTab = new TabPage();
+            comboBox16 = new ComboBox();
+            ProjectTypeLabel = new Label();
+            comboBox15 = new ComboBox();
+            ProgrammingLanguageLabel = new Label();
             IDVCountLabel = new Label();
             IDVCountTextBox = new TextBox();
             FPCountLabel = new Label();
@@ -63,33 +88,8 @@
             DurationLabel = new Label();
             DurationTextBox = new TextBox();
             CalculateButton = new Button();
-            QuestionEightLabel = new Label();
-            QuestionNineLabel = new Label();
-            QuestionTenLabel = new Label();
-            QuestionElevenLabel = new Label();
-            QuestionTwelveLabel = new Label();
-            QuestionThirteenLabel = new Label();
-            QuestionFourteenLabel = new Label();
             WeightFactorLabel = new Label();
             textBox3 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
-            comboBox5 = new ComboBox();
-            comboBox6 = new ComboBox();
-            comboBox7 = new ComboBox();
-            comboBox8 = new ComboBox();
-            comboBox9 = new ComboBox();
-            comboBox10 = new ComboBox();
-            comboBox11 = new ComboBox();
-            comboBox12 = new ComboBox();
-            comboBox13 = new ComboBox();
-            comboBox14 = new ComboBox();
-            ProgrammingLanguageLabel = new Label();
-            comboBox15 = new ComboBox();
-            ProjectTypeLabel = new Label();
-            comboBox16 = new ComboBox();
             COCOMOTabControl.SuspendLayout();
             IDVTab.SuspendLayout();
             CWTab.SuspendLayout();
@@ -167,14 +167,14 @@
             // 
             // filesNum
             // 
-            filesNum.Location = new Point(280, 130);
+            filesNum.Location = new Point(280, 183);
             filesNum.Name = "filesNum";
             filesNum.Size = new Size(150, 31);
             filesNum.TabIndex = 18;
             // 
             // externalInterfacesNum
             // 
-            externalInterfacesNum.Location = new Point(280, 180);
+            externalInterfacesNum.Location = new Point(280, 233);
             externalInterfacesNum.Name = "externalInterfacesNum";
             externalInterfacesNum.Size = new Size(150, 31);
             externalInterfacesNum.TabIndex = 19;
@@ -212,7 +212,7 @@
             // 
             // IDVTab
             // 
-            IDVTab.Controls.Add(textBox1);
+            IDVTab.Controls.Add(userInquiriesNum);
             IDVTab.Controls.Add(userInputsNumLabel);
             IDVTab.Controls.Add(weightComboBox);
             IDVTab.Controls.Add(userOutputsNumLabel);
@@ -232,12 +232,12 @@
             IDVTab.Text = "Information Domain Values";
             IDVTab.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // userInquiriesNum
             // 
-            textBox1.Location = new Point(280, 230);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 22;
+            userInquiriesNum.Location = new Point(280, 133);
+            userInquiriesNum.Name = "userInquiriesNum";
+            userInquiriesNum.Size = new Size(150, 31);
+            userInquiriesNum.TabIndex = 22;
             // 
             // CWTab
             // 
@@ -276,6 +276,202 @@
             CWTab.TabIndex = 1;
             CWTab.Text = "Complexity Weights";
             CWTab.UseVisualStyleBackColor = true;
+            // 
+            // comboBox14
+            // 
+            comboBox14.FormattingEnabled = true;
+            comboBox14.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox14.Location = new Point(521, 860);
+            comboBox14.Name = "comboBox14";
+            comboBox14.Size = new Size(182, 33);
+            comboBox14.TabIndex = 27;
+            // 
+            // comboBox13
+            // 
+            comboBox13.FormattingEnabled = true;
+            comboBox13.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox13.Location = new Point(521, 778);
+            comboBox13.Name = "comboBox13";
+            comboBox13.Size = new Size(182, 33);
+            comboBox13.TabIndex = 26;
+            // 
+            // comboBox12
+            // 
+            comboBox12.FormattingEnabled = true;
+            comboBox12.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox12.Location = new Point(521, 714);
+            comboBox12.Name = "comboBox12";
+            comboBox12.Size = new Size(182, 33);
+            comboBox12.TabIndex = 25;
+            // 
+            // comboBox11
+            // 
+            comboBox11.FormattingEnabled = true;
+            comboBox11.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox11.Location = new Point(521, 658);
+            comboBox11.Name = "comboBox11";
+            comboBox11.Size = new Size(182, 33);
+            comboBox11.TabIndex = 24;
+            // 
+            // comboBox10
+            // 
+            comboBox10.FormattingEnabled = true;
+            comboBox10.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox10.Location = new Point(521, 602);
+            comboBox10.Name = "comboBox10";
+            comboBox10.Size = new Size(182, 33);
+            comboBox10.TabIndex = 23;
+            // 
+            // comboBox9
+            // 
+            comboBox9.FormattingEnabled = true;
+            comboBox9.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox9.Location = new Point(521, 547);
+            comboBox9.Name = "comboBox9";
+            comboBox9.Size = new Size(182, 33);
+            comboBox9.TabIndex = 22;
+            // 
+            // comboBox8
+            // 
+            comboBox8.FormattingEnabled = true;
+            comboBox8.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox8.Location = new Point(521, 481);
+            comboBox8.Name = "comboBox8";
+            comboBox8.Size = new Size(182, 33);
+            comboBox8.TabIndex = 21;
+            // 
+            // comboBox7
+            // 
+            comboBox7.FormattingEnabled = true;
+            comboBox7.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox7.Location = new Point(521, 403);
+            comboBox7.Name = "comboBox7";
+            comboBox7.Size = new Size(182, 33);
+            comboBox7.TabIndex = 20;
+            // 
+            // comboBox6
+            // 
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox6.Location = new Point(521, 353);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(182, 33);
+            comboBox6.TabIndex = 19;
+            // 
+            // comboBox5
+            // 
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox5.Location = new Point(521, 278);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(182, 33);
+            comboBox5.TabIndex = 18;
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox4.Location = new Point(521, 234);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(182, 33);
+            comboBox4.TabIndex = 17;
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox3.Location = new Point(521, 168);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(182, 33);
+            comboBox3.TabIndex = 16;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox2.Location = new Point(521, 103);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(182, 33);
+            comboBox2.TabIndex = 15;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
+            comboBox1.Location = new Point(521, 39);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(182, 33);
+            comboBox1.TabIndex = 14;
+            // 
+            // QuestionFourteenLabel
+            // 
+            QuestionFourteenLabel.AutoSize = true;
+            QuestionFourteenLabel.Location = new Point(40, 860);
+            QuestionFourteenLabel.Name = "QuestionFourteenLabel";
+            QuestionFourteenLabel.Size = new Size(448, 50);
+            QuestionFourteenLabel.TabIndex = 13;
+            QuestionFourteenLabel.Text = "14. Is the application designed to facilitate change and \r\nease of use by the user?";
+            QuestionFourteenLabel.TextAlign = ContentAlignment.TopRight;
+            // 
+            // QuestionThirteenLabel
+            // 
+            QuestionThirteenLabel.AutoSize = true;
+            QuestionThirteenLabel.Location = new Point(46, 778);
+            QuestionThirteenLabel.Name = "QuestionThirteenLabel";
+            QuestionThirteenLabel.Size = new Size(442, 50);
+            QuestionThirteenLabel.TabIndex = 12;
+            QuestionThirteenLabel.Text = "13. Is the system designed for multiple installations in \r\ndifferent organizations?";
+            QuestionThirteenLabel.TextAlign = ContentAlignment.TopRight;
+            // 
+            // QuestionTwelveLabel
+            // 
+            QuestionTwelveLabel.AutoSize = true;
+            QuestionTwelveLabel.Location = new Point(17, 714);
+            QuestionTwelveLabel.Name = "QuestionTwelveLabel";
+            QuestionTwelveLabel.Size = new Size(471, 25);
+            QuestionTwelveLabel.TabIndex = 11;
+            QuestionTwelveLabel.Text = "12. Are conversion and installation included in the design?";
+            QuestionTwelveLabel.TextAlign = ContentAlignment.TopRight;
+            // 
+            // QuestionElevenLabel
+            // 
+            QuestionElevenLabel.AutoSize = true;
+            QuestionElevenLabel.Location = new Point(154, 658);
+            QuestionElevenLabel.Name = "QuestionElevenLabel";
+            QuestionElevenLabel.Size = new Size(334, 25);
+            QuestionElevenLabel.TabIndex = 10;
+            QuestionElevenLabel.Text = "11. In the code designed to be reusable?";
+            QuestionElevenLabel.TextAlign = ContentAlignment.TopRight;
+            // 
+            // QuestionTenLabel
+            // 
+            QuestionTenLabel.AutoSize = true;
+            QuestionTenLabel.Location = new Point(170, 602);
+            QuestionTenLabel.Name = "QuestionTenLabel";
+            QuestionTenLabel.Size = new Size(318, 25);
+            QuestionTenLabel.TabIndex = 9;
+            QuestionTenLabel.Text = "10. Is the internal processing complex?";
+            QuestionTenLabel.TextAlign = ContentAlignment.TopRight;
+            // 
+            // QuestionNineLabel
+            // 
+            QuestionNineLabel.AutoSize = true;
+            QuestionNineLabel.Location = new Point(58, 547);
+            QuestionNineLabel.Name = "QuestionNineLabel";
+            QuestionNineLabel.Size = new Size(430, 25);
+            QuestionNineLabel.TabIndex = 8;
+            QuestionNineLabel.Text = "9. Are the inputs, outputs, files, or inquiries complex?";
+            QuestionNineLabel.TextAlign = ContentAlignment.TopRight;
+            // 
+            // QuestionEightLabel
+            // 
+            QuestionEightLabel.AutoSize = true;
+            QuestionEightLabel.Location = new Point(173, 481);
+            QuestionEightLabel.Name = "QuestionEightLabel";
+            QuestionEightLabel.Size = new Size(315, 25);
+            QuestionEightLabel.TabIndex = 7;
+            QuestionEightLabel.Text = "8. Are the master file updated on-line?";
+            QuestionEightLabel.TextAlign = ContentAlignment.TopRight;
             // 
             // QuestionSevenLabel
             // 
@@ -355,6 +551,42 @@
             ProjectInfoTab.TabIndex = 2;
             ProjectInfoTab.Text = "Project Info";
             ProjectInfoTab.UseVisualStyleBackColor = true;
+            // 
+            // comboBox16
+            // 
+            comboBox16.FormattingEnabled = true;
+            comboBox16.Items.AddRange(new object[] { "Organic", "Semi-detached", "Embedded" });
+            comboBox16.Location = new Point(264, 123);
+            comboBox16.Name = "comboBox16";
+            comboBox16.Size = new Size(182, 33);
+            comboBox16.TabIndex = 3;
+            // 
+            // ProjectTypeLabel
+            // 
+            ProjectTypeLabel.AutoSize = true;
+            ProjectTypeLabel.Location = new Point(129, 123);
+            ProjectTypeLabel.Name = "ProjectTypeLabel";
+            ProjectTypeLabel.Size = new Size(112, 25);
+            ProjectTypeLabel.TabIndex = 2;
+            ProjectTypeLabel.Text = "Project Type:";
+            // 
+            // comboBox15
+            // 
+            comboBox15.FormattingEnabled = true;
+            comboBox15.Items.AddRange(new object[] { "Assembly Language", "C", "COBOL", "Fortran", "Pascal", "Ada", "Object-Oriented Language", "Fourth Generation Language", "Code Generator", "Spreadsheet", "Graphical Language" });
+            comboBox15.Location = new Point(264, 32);
+            comboBox15.Name = "comboBox15";
+            comboBox15.Size = new Size(182, 33);
+            comboBox15.TabIndex = 1;
+            // 
+            // ProgrammingLanguageLabel
+            // 
+            ProgrammingLanguageLabel.AutoSize = true;
+            ProgrammingLanguageLabel.Location = new Point(28, 32);
+            ProgrammingLanguageLabel.Name = "ProgrammingLanguageLabel";
+            ProgrammingLanguageLabel.Size = new Size(213, 25);
+            ProgrammingLanguageLabel.TabIndex = 0;
+            ProgrammingLanguageLabel.Text = "Programming Language: ";
             // 
             // IDVCountLabel
             // 
@@ -450,76 +682,7 @@
             CalculateButton.TabIndex = 0;
             CalculateButton.Text = "Calculate";
             CalculateButton.UseVisualStyleBackColor = true;
-            // 
-            // QuestionEightLabel
-            // 
-            QuestionEightLabel.AutoSize = true;
-            QuestionEightLabel.Location = new Point(173, 481);
-            QuestionEightLabel.Name = "QuestionEightLabel";
-            QuestionEightLabel.Size = new Size(315, 25);
-            QuestionEightLabel.TabIndex = 7;
-            QuestionEightLabel.Text = "8. Are the master file updated on-line?";
-            QuestionEightLabel.TextAlign = ContentAlignment.TopRight;
-            // 
-            // QuestionNineLabel
-            // 
-            QuestionNineLabel.AutoSize = true;
-            QuestionNineLabel.Location = new Point(58, 547);
-            QuestionNineLabel.Name = "QuestionNineLabel";
-            QuestionNineLabel.Size = new Size(430, 25);
-            QuestionNineLabel.TabIndex = 8;
-            QuestionNineLabel.Text = "9. Are the inputs, outputs, files, or inquiries complex?";
-            QuestionNineLabel.TextAlign = ContentAlignment.TopRight;
-            // 
-            // QuestionTenLabel
-            // 
-            QuestionTenLabel.AutoSize = true;
-            QuestionTenLabel.Location = new Point(170, 602);
-            QuestionTenLabel.Name = "QuestionTenLabel";
-            QuestionTenLabel.Size = new Size(318, 25);
-            QuestionTenLabel.TabIndex = 9;
-            QuestionTenLabel.Text = "10. Is the internal processing complex?";
-            QuestionTenLabel.TextAlign = ContentAlignment.TopRight;
-            // 
-            // QuestionElevenLabel
-            // 
-            QuestionElevenLabel.AutoSize = true;
-            QuestionElevenLabel.Location = new Point(154, 658);
-            QuestionElevenLabel.Name = "QuestionElevenLabel";
-            QuestionElevenLabel.Size = new Size(334, 25);
-            QuestionElevenLabel.TabIndex = 10;
-            QuestionElevenLabel.Text = "11. In the code designed to be reusable?";
-            QuestionElevenLabel.TextAlign = ContentAlignment.TopRight;
-            // 
-            // QuestionTwelveLabel
-            // 
-            QuestionTwelveLabel.AutoSize = true;
-            QuestionTwelveLabel.Location = new Point(17, 714);
-            QuestionTwelveLabel.Name = "QuestionTwelveLabel";
-            QuestionTwelveLabel.Size = new Size(471, 25);
-            QuestionTwelveLabel.TabIndex = 11;
-            QuestionTwelveLabel.Text = "12. Are conversion and installation included in the design?";
-            QuestionTwelveLabel.TextAlign = ContentAlignment.TopRight;
-            // 
-            // QuestionThirteenLabel
-            // 
-            QuestionThirteenLabel.AutoSize = true;
-            QuestionThirteenLabel.Location = new Point(46, 778);
-            QuestionThirteenLabel.Name = "QuestionThirteenLabel";
-            QuestionThirteenLabel.Size = new Size(442, 50);
-            QuestionThirteenLabel.TabIndex = 12;
-            QuestionThirteenLabel.Text = "13. Is the system designed for multiple installations in \r\ndifferent organizations?";
-            QuestionThirteenLabel.TextAlign = ContentAlignment.TopRight;
-            // 
-            // QuestionFourteenLabel
-            // 
-            QuestionFourteenLabel.AutoSize = true;
-            QuestionFourteenLabel.Location = new Point(40, 860);
-            QuestionFourteenLabel.Name = "QuestionFourteenLabel";
-            QuestionFourteenLabel.Size = new Size(448, 50);
-            QuestionFourteenLabel.TabIndex = 13;
-            QuestionFourteenLabel.Text = "14. Is the application designed to facilitate change and \r\nease of use by the user?";
-            QuestionFourteenLabel.TextAlign = ContentAlignment.TopRight;
+            CalculateButton.Click += CalculateButton_Click;
             // 
             // WeightFactorLabel
             // 
@@ -537,168 +700,6 @@
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(150, 31);
             textBox3.TabIndex = 34;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox1.Location = new Point(521, 39);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 14;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox2.Location = new Point(521, 103);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(182, 33);
-            comboBox2.TabIndex = 15;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox3.Location = new Point(521, 168);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(182, 33);
-            comboBox3.TabIndex = 16;
-            // 
-            // comboBox4
-            // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox4.Location = new Point(521, 234);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(182, 33);
-            comboBox4.TabIndex = 17;
-            // 
-            // comboBox5
-            // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox5.Location = new Point(521, 278);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(182, 33);
-            comboBox5.TabIndex = 18;
-            // 
-            // comboBox6
-            // 
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox6.Location = new Point(521, 353);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(182, 33);
-            comboBox6.TabIndex = 19;
-            // 
-            // comboBox7
-            // 
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox7.Location = new Point(521, 403);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(182, 33);
-            comboBox7.TabIndex = 20;
-            // 
-            // comboBox8
-            // 
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox8.Location = new Point(521, 481);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new Size(182, 33);
-            comboBox8.TabIndex = 21;
-            // 
-            // comboBox9
-            // 
-            comboBox9.FormattingEnabled = true;
-            comboBox9.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox9.Location = new Point(521, 547);
-            comboBox9.Name = "comboBox9";
-            comboBox9.Size = new Size(182, 33);
-            comboBox9.TabIndex = 22;
-            // 
-            // comboBox10
-            // 
-            comboBox10.FormattingEnabled = true;
-            comboBox10.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox10.Location = new Point(521, 602);
-            comboBox10.Name = "comboBox10";
-            comboBox10.Size = new Size(182, 33);
-            comboBox10.TabIndex = 23;
-            // 
-            // comboBox11
-            // 
-            comboBox11.FormattingEnabled = true;
-            comboBox11.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox11.Location = new Point(521, 658);
-            comboBox11.Name = "comboBox11";
-            comboBox11.Size = new Size(182, 33);
-            comboBox11.TabIndex = 24;
-            // 
-            // comboBox12
-            // 
-            comboBox12.FormattingEnabled = true;
-            comboBox12.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox12.Location = new Point(521, 714);
-            comboBox12.Name = "comboBox12";
-            comboBox12.Size = new Size(182, 33);
-            comboBox12.TabIndex = 25;
-            // 
-            // comboBox13
-            // 
-            comboBox13.FormattingEnabled = true;
-            comboBox13.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox13.Location = new Point(521, 778);
-            comboBox13.Name = "comboBox13";
-            comboBox13.Size = new Size(182, 33);
-            comboBox13.TabIndex = 26;
-            // 
-            // comboBox14
-            // 
-            comboBox14.FormattingEnabled = true;
-            comboBox14.Items.AddRange(new object[] { "0 - No Influence", "1- Incidental", "2 - Moderate", "3 - Average", "4 - Significant", "5 - Essential" });
-            comboBox14.Location = new Point(521, 860);
-            comboBox14.Name = "comboBox14";
-            comboBox14.Size = new Size(182, 33);
-            comboBox14.TabIndex = 27;
-            // 
-            // ProgrammingLanguageLabel
-            // 
-            ProgrammingLanguageLabel.AutoSize = true;
-            ProgrammingLanguageLabel.Location = new Point(28, 32);
-            ProgrammingLanguageLabel.Name = "ProgrammingLanguageLabel";
-            ProgrammingLanguageLabel.Size = new Size(213, 25);
-            ProgrammingLanguageLabel.TabIndex = 0;
-            ProgrammingLanguageLabel.Text = "Programming Language: ";
-            // 
-            // comboBox15
-            // 
-            comboBox15.FormattingEnabled = true;
-            comboBox15.Items.AddRange(new object[] { "Assembly Language", "C", "COBOL", "Fortran", "Pascal", "Ada", "Object-Oriented Language", "Fourth Generation Language", "Code Generator", "Spreadsheet", "Graphical Language" });
-            comboBox15.Location = new Point(264, 32);
-            comboBox15.Name = "comboBox15";
-            comboBox15.Size = new Size(182, 33);
-            comboBox15.TabIndex = 1;
-            // 
-            // ProjectTypeLabel
-            // 
-            ProjectTypeLabel.AutoSize = true;
-            ProjectTypeLabel.Location = new Point(129, 123);
-            ProjectTypeLabel.Name = "ProjectTypeLabel";
-            ProjectTypeLabel.Size = new Size(112, 25);
-            ProjectTypeLabel.TabIndex = 2;
-            ProjectTypeLabel.Text = "Project Type:";
-            // 
-            // comboBox16
-            // 
-            comboBox16.FormattingEnabled = true;
-            comboBox16.Items.AddRange(new object[] { "Organic", "Semi-detached", "Embedded" });
-            comboBox16.Location = new Point(264, 123);
-            comboBox16.Name = "comboBox16";
-            comboBox16.Size = new Size(182, 33);
-            comboBox16.TabIndex = 3;
             // 
             // MainForm
             // 
@@ -750,7 +751,7 @@
         private TabPage CWTab;
         private TabPage ProjectInfoTab;
         private TabPage IDVTab;
-        private TextBox textBox1;
+        private TextBox userInquiriesNum;
         private Label IDVCountLabel;
         private TextBox IDVCountTextBox;
         private Label FPCountLabel;

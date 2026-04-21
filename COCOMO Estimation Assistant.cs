@@ -2,6 +2,11 @@ namespace CIS375Final
 {
     public partial class MainForm : Form
     {
+        public int IDVCount = -1;
+        public int WeightFactor = -1;
+        public int NumFunctionPoints = -1;
+        public float LOCPerFP = -1.0f;
+
         public class ModeCoefficients
         {
             public ModeCoefficients() { }
@@ -22,6 +27,78 @@ namespace CIS375Final
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void CalculateButton_Click(object sender, EventArgs e)
+        {
+            CalculateInformationDomainValues(sender, e);
+
+            WriteInfoToBoxes();
+        }
+
+        private void CalculateInformationDomainValues(object sender, EventArgs e)
+        {
+            int[] userValues = new int[5];
+
+            // Get textbox results
+            if(!int.TryParse(userInputsNum.Text, out userValues[0]))
+            {
+                return;
+            }
+            if (!int.TryParse(userOutputsNum.Text, out userValues[1]))
+            {
+                return;
+            }
+            if (!int.TryParse(userInquiriesNum.Text, out userValues[2]))
+            {
+                return;
+            }
+            if (!int.TryParse(filesNum.Text, out userValues[3]))
+            {
+                return;
+            }
+            if (!int.TryParse(externalInterfacesNum.Text, out userValues[4]))
+            {
+                return;
+            }
+
+            int[] weightValues = new int[5];
+            weightValues = [0, 0, 0, 0, 0];
+
+            switch (weightComboBox.SelectedIndex)
+            {
+                case 0:
+                    weightValues = [3, 4, 3, 7, 5];
+                    break;
+                case 1:
+                    weightValues = [4, 5, 4, 10, 7];
+                    break;
+                case 2:
+                    weightValues = [6, 7, 6, 15, 10];
+                    break;
+                default:
+                    MessageBox.Show("Invalid weight was chosen");
+                    break;
+            }
+
+            int totalCount = 0;
+            for(int i = 0; i < 5; i++)
+            {
+                totalCount += weightValues[i] * userValues[i];
+            }
+            IDVCount = totalCount;
+        }
+
+        private void WriteInfoToBoxes()
+        {
+            if (IDVCount != -1)
+            {
+                IDVCountTextBox.Text = IDVCount.ToString();
+            }
+            else
+            {
+                IDVCountTextBox.Text = "N/A";
+            }
         }
 
         //private void button1_Click(object sender, EventArgs e)
