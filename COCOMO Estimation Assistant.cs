@@ -288,28 +288,5 @@ namespace CIS375Final
             mc.c = c;
             mc.d = d;
         }
-
-        public (string, string) GetEstimations(double kloc, ModeCoefficients mc)
-        {
-            double personMonths = mc.a * Math.Pow(kloc, mc.b);
-            double months = mc.c * Math.Pow(personMonths, mc.d);
-            double peopleNeeded = personMonths / months;
-
-
-
-            return (months.ToString("F2"), peopleNeeded.ToString("F2"));
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string helpText = string.Empty;
-
-            helpText += "Calculate the estimated values via the following:\n";
-            helpText += "1. Input your estimated lines of code in thousands\n";
-            helpText += "2. Select your project type\n";
-            helpText += "3. Press Calculate and see your answers below!\n";
-
-            MessageBox.Show(helpText, "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
     }
 }
