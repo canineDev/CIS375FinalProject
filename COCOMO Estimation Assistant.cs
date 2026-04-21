@@ -1,5 +1,9 @@
 namespace CIS375Final
 {
+    /// <summary>
+    /// The Main Form that is generated and drawn to the screen as the main
+    /// application for the COCOMO Estimation Assistant
+    /// </summary>
     public partial class MainForm : Form
     {
         public int IDVCount = -1;
@@ -10,6 +14,9 @@ namespace CIS375Final
         public float Duration = -1;
         public ModeCoefficients mc = new();
 
+        /// <summary>
+        /// Holds the values for a, b, c, and d
+        /// </summary>
         public class ModeCoefficients
         {
             public ModeCoefficients() { }
@@ -20,6 +27,9 @@ namespace CIS375Final
             public float d;
         }
 
+        /// <summary>
+        /// Initializes the form and its values
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -27,6 +37,9 @@ namespace CIS375Final
             InitializeDefaultComboBoxValues();
         }
 
+        /// <summary>
+        /// Initializes the combo box values to the first option
+        /// </summary>
         private void InitializeDefaultComboBoxValues()
         {
             weightComboBox.SelectedIndex = 0;
@@ -50,16 +63,24 @@ namespace CIS375Final
             projectTypeComboBox.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Gets called when the calculate button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             CalculateInformationDomainValues();
             CalculateComplexityWeightValues();
             CalculateProjectInfoValues();
-            CalculateEffort();
+            CalculateEffortAndDuration();
 
             WriteInfoToBoxes();
         }
 
+        /// <summary>
+        /// Will calculate the information domain values by reading the text box values and summing them up
+        /// </summary>
         private void CalculateInformationDomainValues()
         {
             int[] userValues = new int[5];
@@ -113,6 +134,10 @@ namespace CIS375Final
             IDVCount = totalCount;
         }
 
+        /// <summary>
+        /// Calculates the weight factor and the number of function points by 
+        /// summing the weights up and using the function point formula
+        /// </summary>
         private void CalculateComplexityWeightValues()
         {
             int[] complexityWeights = new int[14];
@@ -147,6 +172,9 @@ namespace CIS375Final
             }
         }
 
+        /// <summary>
+        /// Calculates the LOC/FP, effort, and duration values using their appropriate formulas
+        /// </summary>
         private void CalculateProjectInfoValues()
         {
             int avgLOC = -1;
@@ -209,7 +237,10 @@ namespace CIS375Final
             }
         }
 
-        private void CalculateEffort()
+        /// <summary>
+        /// Calculates the effort and duration using the E and D formulas
+        /// </summary>
+        private void CalculateEffortAndDuration()
         {
             float effort = mc.a * (float)Math.Pow(LOCPerFP / 1000, mc.b);
             Effort = effort;
@@ -218,6 +249,9 @@ namespace CIS375Final
             Duration = duration;
         }
 
+        /// <summary>
+        /// Will write the values into the text boxes at the bottom of the application
+        /// </summary>
         private void WriteInfoToBoxes()
         {
             // IDV Count
@@ -281,6 +315,14 @@ namespace CIS375Final
             }
         }
 
+        /// <summary>
+        /// helper to set the coefficients of the formula based on project type
+        /// </summary>
+        /// <param name="mc"></param>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
         public void SetCoefficients(ModeCoefficients mc, float a, float b, float c, float d)
         {
             mc.a = a;
@@ -289,6 +331,11 @@ namespace CIS375Final
             mc.d = d;
         }
 
+        /// <summary>
+        /// Pops up the help menu for the Information Domain Values tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void IDVHelpButton_Click(object sender, EventArgs e)
         {
             string helpText = string.Empty;
@@ -300,6 +347,11 @@ namespace CIS375Final
             MessageBox.Show(helpText, "Information Domain Value Help", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
+        /// <summary>
+        /// Pops up the help menu for the Complexity Weights tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CWHelpButton_Click(object sender, EventArgs e)
         {
             string helpText = string.Empty;
@@ -310,6 +362,11 @@ namespace CIS375Final
             MessageBox.Show(helpText, "Complexity Weight Help", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
+        /// <summary>
+        /// Pops up the help menu for the Project Info tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PIHelpButton_Click(object sender, EventArgs e)
         {
             string helpText = string.Empty;
