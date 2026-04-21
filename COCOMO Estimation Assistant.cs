@@ -24,39 +24,39 @@ namespace CIS375Final
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (!double.TryParse(textBox1.Text, out double kloc))
-            {
-                return;
-            }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    if (!double.TryParse(textBox1.Text, out double kloc))
+        //    {
+        //        return;
+        //    }
 
 
-            ProjectType projectType;
-            ModeCoefficients mc = new();
+        //    ProjectType projectType;
+        //    ModeCoefficients mc = new();
 
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    projectType = ProjectType.Organic;
-                    SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
-                    break;
-                case 1:
-                    projectType = ProjectType.Semidetached;
-                    SetCoefficients(mc, 3.0, 1.12, 2.5, 0.35);
-                    break;
-                case 2:
-                    projectType = ProjectType.Embedded;
-                    SetCoefficients(mc, 3.6, 1.20, 2.5, 0.32);
-                    break;
-                default:
-                    projectType = ProjectType.Organic;
-                    SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
-                    break;
-            }
+        //    switch (weightComboBox.SelectedIndex)
+        //    {
+        //        case 0:
+        //            projectType = ProjectType.Organic;
+        //            SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
+        //            break;
+        //        case 1:
+        //            projectType = ProjectType.Semidetached;
+        //            SetCoefficients(mc, 3.0, 1.12, 2.5, 0.35);
+        //            break;
+        //        case 2:
+        //            projectType = ProjectType.Embedded;
+        //            SetCoefficients(mc, 3.6, 1.20, 2.5, 0.32);
+        //            break;
+        //        default:
+        //            projectType = ProjectType.Organic;
+        //            SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
+        //            break;
+        //    }
 
-            (label5.Text, label6.Text) = GetEstimations(kloc, projectType, mc);
-        }
+        //    (label5.Text, label6.Text) = GetEstimations(kloc, projectType, mc);
+        //}
 
         public void SetCoefficients(ModeCoefficients mc, double a, double b, double c, double d)
         {
