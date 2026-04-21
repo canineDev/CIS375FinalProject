@@ -6,15 +6,18 @@ namespace CIS375Final
         public int WeightFactor = -1;
         public float NumFunctionPoints = -1;
         public float LOCPerFP = -1;
+        public float Effort = -1;
+        public float Duration = -1;
+        public ModeCoefficients mc = new();
 
         public class ModeCoefficients
         {
             public ModeCoefficients() { }
 
-            public double a;
-            public double b;
-            public double c;
-            public double d;
+            public float a;
+            public float b;
+            public float c;
+            public float d;
         }
 
         public MainForm()
@@ -52,6 +55,7 @@ namespace CIS375Final
             CalculateInformationDomainValues();
             CalculateComplexityWeightValues();
             CalculateProjectInfoValues();
+            CalculateEffort();
 
             WriteInfoToBoxes();
         }
@@ -188,25 +192,32 @@ namespace CIS375Final
                 LOCPerFP = (float)avgLOC * NumFunctionPoints;
             }
 
-            ModeCoefficients mc = new();
-
             switch (projectTypeComboBox.SelectedIndex)
             {
                 case 0:
-                    SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
+                    SetCoefficients(mc, 2.4f, 1.05f, 2.5f, 0.38f);
                     break;
                 case 1:
-                    SetCoefficients(mc, 3.0, 1.12, 2.5, 0.35);
+                    SetCoefficients(mc, 3.0f, 1.12f, 2.5f, 0.35f);
                     break;
                 case 2:
-                    SetCoefficients(mc, 3.6, 1.20, 2.5, 0.32);
+                    SetCoefficients(mc, 3.6f, 1.20f, 2.5f, 0.32f);
                     break;
                 default:
-                    SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
+                    SetCoefficients(mc, 2.4f, 1.05f, 2.5f, 0.38f);
                     break;
             }
         }
 
+        private void CalculateEffort()
+        {
+            float effort = mc.a * (float)Math.Pow(LOCPerFP/1000, mc.b);
+            Effort = effort;
+
+            float duration = mc.c * (float)Math.Pow(Effort, mc.d);
+            Duration = duration;
+        }
+        
         private void WriteInfoToBoxes()
         {
             // IDV Count
@@ -248,38 +259,29 @@ namespace CIS375Final
             {
                 LOCPerFPTextBox.Text = "N/A";
             }
+
+            // Effort
+            if (Effort > -1)
+            {
+                EffortTextBox.Text = Effort.ToString("F2");
+            }
+            else
+            {
+                EffortTextBox.Text = "N/A";
+            }
+
+            // Duration
+            if (Duration > -1)
+            {
+                DurationTextBox.Text = Duration.ToString("F2");
+            }
+            else
+            {
+                DurationTextBox.Text = "N/A";
+            }
         }
 
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    if (!double.TryParse(textBox1.Text, out double kloc))
-        //    {
-        //        return;
-        //    }
-
-
-        //    ModeCoefficients mc = new();
-
-        //    switch (weightComboBox.SelectedIndex)
-        //    {
-        //        case 0:
-        //            SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
-        //            break;
-        //        case 1:
-        //            SetCoefficients(mc, 3.0, 1.12, 2.5, 0.35);
-        //            break;
-        //        case 2:
-        //            SetCoefficients(mc, 3.6, 1.20, 2.5, 0.32);
-        //            break;
-        //        default:
-        //            SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
-        //            break;
-        //    }
-
-        //    (label5.Text, label6.Text) = GetEstimations(kloc, projectType, mc);
-        //}
-
-        public void SetCoefficients(ModeCoefficients mc, double a, double b, double c, double d)
+        public void SetCoefficients(ModeCoefficients mc, float a, float b, float c, float d)
         {
             mc.a = a;
             mc.b = b;
