@@ -82,7 +82,7 @@
             FPCountLabel = new Label();
             FPCountTextBox = new TextBox();
             LOCPerFPLabel = new Label();
-            textBox2 = new TextBox();
+            LOCPerFPTextBox = new TextBox();
             EffortLabel = new Label();
             EffortTextBox = new TextBox();
             DurationLabel = new Label();
@@ -631,13 +631,13 @@
             LOCPerFPLabel.TabIndex = 27;
             LOCPerFPLabel.Text = "LOC/FP: ";
             // 
-            // textBox2
+            // LOCPerFPTextBox
             // 
-            textBox2.Location = new Point(1292, 1411);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(150, 31);
-            textBox2.TabIndex = 28;
+            LOCPerFPTextBox.Location = new Point(1292, 1411);
+            LOCPerFPTextBox.Name = "LOCPerFPTextBox";
+            LOCPerFPTextBox.ReadOnly = true;
+            LOCPerFPTextBox.Size = new Size(150, 31);
+            LOCPerFPTextBox.TabIndex = 28;
             // 
             // EffortLabel
             // 
@@ -713,7 +713,7 @@
             Controls.Add(DurationLabel);
             Controls.Add(EffortTextBox);
             Controls.Add(EffortLabel);
-            Controls.Add(textBox2);
+            Controls.Add(LOCPerFPTextBox);
             Controls.Add(LOCPerFPLabel);
             Controls.Add(FPCountTextBox);
             Controls.Add(FPCountLabel);
@@ -757,7 +757,7 @@
         private Label FPCountLabel;
         private TextBox FPCountTextBox;
         private Label LOCPerFPLabel;
-        private TextBox textBox2;
+        private TextBox LOCPerFPTextBox;
         private Label EffortLabel;
         private TextBox EffortTextBox;
         private Label DurationLabel;

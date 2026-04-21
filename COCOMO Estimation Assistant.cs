@@ -5,7 +5,7 @@ namespace CIS375Final
         public int IDVCount = -1;
         public int WeightFactor = -1;
         public float NumFunctionPoints = -1;
-        public int LOCPerFP = -1;
+        public float LOCPerFP = -1;
 
         public class ModeCoefficients
         {
@@ -145,45 +145,48 @@ namespace CIS375Final
 
         private void CalculateProjectInfoValues()
         {
-            int LOCperFP = -1;
+            int avgLOC = -1;
             switch(programmingLanguageComboBox.SelectedIndex)
             {
                 case 0:
-                    LOCperFP = 320;
+                    avgLOC = 320;
                     break;
                 case 1:
-                    LOCperFP = 128;
+                    avgLOC = 128;
                     break;
                 case 2:
                 case 3:
-                    LOCperFP = 105;
+                    avgLOC = 105;
                     break;
                 case 4:
-                    LOCperFP = 90;
+                    avgLOC = 90;
                     break;
                 case 5:
-                    LOCperFP = 70;
+                    avgLOC = 70;
                     break;
                 case 6:
-                    LOCperFP = 30;
+                    avgLOC = 30;
                     break;
                 case 7:
-                    LOCperFP = 20;
+                    avgLOC = 20;
                     break;
                 case 8:
-                    LOCperFP = 15;
+                    avgLOC = 15;
                     break;
                 case 9:
-                    LOCperFP = 6;
+                    avgLOC = 6;
                     break;
                 case 10:
-                    LOCperFP = 4;
+                    avgLOC = 4;
                     break;
                 default:
                     break;
             }
 
-            LOCPerFP = LOCperFP;
+            if (NumFunctionPoints > -1)
+            {
+                LOCPerFP = (float)avgLOC * NumFunctionPoints;
+            }
 
             ModeCoefficients mc = new();
 
@@ -234,6 +237,16 @@ namespace CIS375Final
             else
             {
                 FPCountTextBox.Text = "N/A";
+            }
+
+            // LOC per FP
+            if (LOCPerFP > -1)
+            {
+                LOCPerFPTextBox.Text = LOCPerFP.ToString("F2");
+            }
+            else
+            {
+                LOCPerFPTextBox.Text = "N/A";
             }
         }
 
