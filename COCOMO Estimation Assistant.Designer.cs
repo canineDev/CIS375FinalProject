@@ -73,9 +73,9 @@
             QuestionTwoLabel = new Label();
             QuestionOneLabel = new Label();
             ProjectInfoTab = new TabPage();
-            comboBox16 = new ComboBox();
+            projectTypeComboBox = new ComboBox();
             ProjectTypeLabel = new Label();
-            comboBox15 = new ComboBox();
+            programmingLanguageComboBox = new ComboBox();
             ProgrammingLanguageLabel = new Label();
             IDVCountLabel = new Label();
             IDVCountTextBox = new TextBox();
@@ -285,7 +285,6 @@
             QuestionFourteenComboBox.Name = "QuestionFourteenComboBox";
             QuestionFourteenComboBox.Size = new Size(182, 33);
             QuestionFourteenComboBox.TabIndex = 27;
-            QuestionFourteenComboBox.SelectedIndex = 0;
             // 
             // QuestionThirteenComboBox
             // 
@@ -295,7 +294,6 @@
             QuestionThirteenComboBox.Name = "QuestionThirteenComboBox";
             QuestionThirteenComboBox.Size = new Size(182, 33);
             QuestionThirteenComboBox.TabIndex = 26;
-            QuestionThirteenComboBox.SelectedIndex = 0;
             // 
             // QuestionTwelveComboBox
             // 
@@ -305,7 +303,6 @@
             QuestionTwelveComboBox.Name = "QuestionTwelveComboBox";
             QuestionTwelveComboBox.Size = new Size(182, 33);
             QuestionTwelveComboBox.TabIndex = 25;
-            QuestionTwelveComboBox.SelectedIndex = 0;
             // 
             // QuestionElevenComboBox
             // 
@@ -315,7 +312,6 @@
             QuestionElevenComboBox.Name = "QuestionElevenComboBox";
             QuestionElevenComboBox.Size = new Size(182, 33);
             QuestionElevenComboBox.TabIndex = 24;
-            QuestionElevenComboBox.SelectedIndex = 0;
             // 
             // QuestionTenComboBox
             // 
@@ -325,7 +321,6 @@
             QuestionTenComboBox.Name = "QuestionTenComboBox";
             QuestionTenComboBox.Size = new Size(182, 33);
             QuestionTenComboBox.TabIndex = 23;
-            QuestionTenComboBox.SelectedIndex = 0;
             // 
             // QuestionNineComboBox
             // 
@@ -335,7 +330,6 @@
             QuestionNineComboBox.Name = "QuestionNineComboBox";
             QuestionNineComboBox.Size = new Size(182, 33);
             QuestionNineComboBox.TabIndex = 22;
-            QuestionNineComboBox.SelectedIndex = 0;
             // 
             // QuestionEightComboBox
             // 
@@ -345,7 +339,6 @@
             QuestionEightComboBox.Name = "QuestionEightComboBox";
             QuestionEightComboBox.Size = new Size(182, 33);
             QuestionEightComboBox.TabIndex = 21;
-            QuestionEightComboBox.SelectedIndex = 0;
             // 
             // QuestionSevenComboBox
             // 
@@ -355,7 +348,6 @@
             QuestionSevenComboBox.Name = "QuestionSevenComboBox";
             QuestionSevenComboBox.Size = new Size(182, 33);
             QuestionSevenComboBox.TabIndex = 20;
-            QuestionSevenComboBox.SelectedIndex = 0;
             // 
             // QuestionSixComboBox
             // 
@@ -365,7 +357,6 @@
             QuestionSixComboBox.Name = "QuestionSixComboBox";
             QuestionSixComboBox.Size = new Size(182, 33);
             QuestionSixComboBox.TabIndex = 19;
-            QuestionSixComboBox.SelectedIndex = 0;
             // 
             // QuestionFiveComboBox
             // 
@@ -375,7 +366,6 @@
             QuestionFiveComboBox.Name = "QuestionFiveComboBox";
             QuestionFiveComboBox.Size = new Size(182, 33);
             QuestionFiveComboBox.TabIndex = 18;
-            QuestionFiveComboBox.SelectedIndex = 0;
             // 
             // QuestionFourComboBox
             // 
@@ -385,7 +375,6 @@
             QuestionFourComboBox.Name = "QuestionFourComboBox";
             QuestionFourComboBox.Size = new Size(182, 33);
             QuestionFourComboBox.TabIndex = 17;
-            QuestionFourComboBox.SelectedIndex = 0;
             // 
             // QuestionThreeComboBox
             // 
@@ -395,7 +384,6 @@
             QuestionThreeComboBox.Name = "QuestionThreeComboBox";
             QuestionThreeComboBox.Size = new Size(182, 33);
             QuestionThreeComboBox.TabIndex = 16;
-            QuestionThreeComboBox.SelectedIndex = 0;
             // 
             // QuestionTwoComboBox
             // 
@@ -405,7 +393,6 @@
             QuestionTwoComboBox.Name = "QuestionTwoComboBox";
             QuestionTwoComboBox.Size = new Size(182, 33);
             QuestionTwoComboBox.TabIndex = 15;
-            QuestionTwoComboBox.SelectedIndex = 0;
             // 
             // QuestionOneComboBox
             // 
@@ -415,7 +402,6 @@
             QuestionOneComboBox.Name = "QuestionOneComboBox";
             QuestionOneComboBox.Size = new Size(182, 33);
             QuestionOneComboBox.TabIndex = 14;
-            QuestionOneComboBox.SelectedIndex = 0;
             // 
             // QuestionFourteenLabel
             // 
@@ -554,9 +540,9 @@
             // 
             // ProjectInfoTab
             // 
-            ProjectInfoTab.Controls.Add(comboBox16);
+            ProjectInfoTab.Controls.Add(projectTypeComboBox);
             ProjectInfoTab.Controls.Add(ProjectTypeLabel);
-            ProjectInfoTab.Controls.Add(comboBox15);
+            ProjectInfoTab.Controls.Add(programmingLanguageComboBox);
             ProjectInfoTab.Controls.Add(ProgrammingLanguageLabel);
             ProjectInfoTab.Location = new Point(4, 68);
             ProjectInfoTab.Name = "ProjectInfoTab";
@@ -566,14 +552,14 @@
             ProjectInfoTab.Text = "Project Info";
             ProjectInfoTab.UseVisualStyleBackColor = true;
             // 
-            // comboBox16
+            // projectTypeComboBox
             // 
-            comboBox16.FormattingEnabled = true;
-            comboBox16.Items.AddRange(new object[] { "Organic", "Semi-detached", "Embedded" });
-            comboBox16.Location = new Point(264, 123);
-            comboBox16.Name = "comboBox16";
-            comboBox16.Size = new Size(182, 33);
-            comboBox16.TabIndex = 3;
+            projectTypeComboBox.FormattingEnabled = true;
+            projectTypeComboBox.Items.AddRange(new object[] { "Organic", "Semi-detached", "Embedded" });
+            projectTypeComboBox.Location = new Point(264, 123);
+            projectTypeComboBox.Name = "projectTypeComboBox";
+            projectTypeComboBox.Size = new Size(434, 33);
+            projectTypeComboBox.TabIndex = 3;
             // 
             // ProjectTypeLabel
             // 
@@ -584,14 +570,14 @@
             ProjectTypeLabel.TabIndex = 2;
             ProjectTypeLabel.Text = "Project Type:";
             // 
-            // comboBox15
+            // programmingLanguageComboBox
             // 
-            comboBox15.FormattingEnabled = true;
-            comboBox15.Items.AddRange(new object[] { "Assembly Language", "C", "COBOL", "Fortran", "Pascal", "Ada", "Object-Oriented Language", "Fourth Generation Language", "Code Generator", "Spreadsheet", "Graphical Language" });
-            comboBox15.Location = new Point(264, 32);
-            comboBox15.Name = "comboBox15";
-            comboBox15.Size = new Size(182, 33);
-            comboBox15.TabIndex = 1;
+            programmingLanguageComboBox.FormattingEnabled = true;
+            programmingLanguageComboBox.Items.AddRange(new object[] { "Assembly Language - 320 Avg LOC/FP", "C - 128 Avg LOC/FP", "COBOL - 105 Avg LOC/FP", "Fortran - 105 Avg LOC/FP", "Pascal - 90 Avg LOC/FP", "Ada - 70 Avg LOC/FP", "Object-Oriented Language - 30 Avg LOC/FP", "Fourth Generation Language - 20 Avg LOC/FP", "Code Generator - 15 Avg LOC/FP", "Spreadsheet - 6 Avg LOC/FP", "Graphical Language - 4 Avg LOC/FP" });
+            programmingLanguageComboBox.Location = new Point(264, 32);
+            programmingLanguageComboBox.Name = "programmingLanguageComboBox";
+            programmingLanguageComboBox.Size = new Size(434, 33);
+            programmingLanguageComboBox.TabIndex = 1;
             // 
             // ProgrammingLanguageLabel
             // 
@@ -808,8 +794,8 @@
         private ComboBox QuestionTwoComboBox;
         private ComboBox QuestionOneComboBox;
         private Label ProjectTypeLabel;
-        private ComboBox comboBox15;
+        private ComboBox programmingLanguageComboBox;
         private Label ProgrammingLanguageLabel;
-        private ComboBox comboBox16;
+        private ComboBox projectTypeComboBox;
     }
 }

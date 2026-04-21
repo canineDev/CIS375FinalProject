@@ -4,8 +4,8 @@ namespace CIS375Final
     {
         public int IDVCount = -1;
         public int WeightFactor = -1;
-        public int NumFunctionPoints = -1;
-        public float LOCPerFP = -1.0f;
+        public float NumFunctionPoints = -1;
+        public int LOCPerFP = -1;
 
         public class ModeCoefficients
         {
@@ -17,22 +17,41 @@ namespace CIS375Final
             public double d;
         }
 
-        public enum ProjectType
-        {
-            Organic,
-            Semidetached,
-            Embedded
-        };
-
         public MainForm()
         {
             InitializeComponent();
+
+            InitializeDefaultComboBoxValues();
+        }
+
+        private void InitializeDefaultComboBoxValues()
+        {
+            weightComboBox.SelectedIndex = 0;
+
+            QuestionOneComboBox.SelectedIndex = 0;
+            QuestionTwoComboBox.SelectedIndex = 0;
+            QuestionThreeComboBox.SelectedIndex = 0;
+            QuestionFourComboBox.SelectedIndex = 0;
+            QuestionFiveComboBox.SelectedIndex = 0;
+            QuestionSixComboBox.SelectedIndex = 0;
+            QuestionSevenComboBox.SelectedIndex = 0;
+            QuestionEightComboBox.SelectedIndex = 0;
+            QuestionNineComboBox.SelectedIndex = 0;
+            QuestionTenComboBox.SelectedIndex = 0;
+            QuestionElevenComboBox.SelectedIndex = 0;
+            QuestionTwelveComboBox.SelectedIndex = 0;
+            QuestionThirteenComboBox.SelectedIndex = 0;
+            QuestionFourteenComboBox.SelectedIndex = 0;
+
+            programmingLanguageComboBox.SelectedIndex = 0;
+            projectTypeComboBox.SelectedIndex = 0;
         }
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             CalculateInformationDomainValues();
             CalculateComplexityWeightValues();
+            CalculateProjectInfoValues();
 
             WriteInfoToBoxes();
         }
@@ -117,6 +136,72 @@ namespace CIS375Final
             }
 
             WeightFactor = totalWeightFactor;
+
+            if (IDVCount > 0 && WeightFactor > 0)
+            {
+                NumFunctionPoints = (float)IDVCount * (0.65f + 0.01f * (float)WeightFactor);
+            }
+        }
+
+        private void CalculateProjectInfoValues()
+        {
+            int LOCperFP = -1;
+            switch(programmingLanguageComboBox.SelectedIndex)
+            {
+                case 0:
+                    LOCperFP = 320;
+                    break;
+                case 1:
+                    LOCperFP = 128;
+                    break;
+                case 2:
+                case 3:
+                    LOCperFP = 105;
+                    break;
+                case 4:
+                    LOCperFP = 90;
+                    break;
+                case 5:
+                    LOCperFP = 70;
+                    break;
+                case 6:
+                    LOCperFP = 30;
+                    break;
+                case 7:
+                    LOCperFP = 20;
+                    break;
+                case 8:
+                    LOCperFP = 15;
+                    break;
+                case 9:
+                    LOCperFP = 6;
+                    break;
+                case 10:
+                    LOCperFP = 4;
+                    break;
+                default:
+                    break;
+            }
+
+            LOCPerFP = LOCperFP;
+
+            ModeCoefficients mc = new();
+
+            switch (projectTypeComboBox.SelectedIndex)
+            {
+                case 0:
+                    SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
+                    break;
+                case 1:
+                    SetCoefficients(mc, 3.0, 1.12, 2.5, 0.35);
+                    break;
+                case 2:
+                    SetCoefficients(mc, 3.6, 1.20, 2.5, 0.32);
+                    break;
+                default:
+                    SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
+                    break;
+            }
         }
 
         private void WriteInfoToBoxes()
@@ -140,6 +225,16 @@ namespace CIS375Final
             {
                 WeightFactorTextBox.Text = "N/A";
             }
+
+            // Function Points
+            if (NumFunctionPoints > -1)
+            {
+                FPCountTextBox.Text = NumFunctionPoints.ToString("F2");
+            }
+            else
+            {
+                FPCountTextBox.Text = "N/A";
+            }
         }
 
         //private void button1_Click(object sender, EventArgs e)
@@ -150,25 +245,20 @@ namespace CIS375Final
         //    }
 
 
-        //    ProjectType projectType;
         //    ModeCoefficients mc = new();
 
         //    switch (weightComboBox.SelectedIndex)
         //    {
         //        case 0:
-        //            projectType = ProjectType.Organic;
         //            SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
         //            break;
         //        case 1:
-        //            projectType = ProjectType.Semidetached;
         //            SetCoefficients(mc, 3.0, 1.12, 2.5, 0.35);
         //            break;
         //        case 2:
-        //            projectType = ProjectType.Embedded;
         //            SetCoefficients(mc, 3.6, 1.20, 2.5, 0.32);
         //            break;
         //        default:
-        //            projectType = ProjectType.Organic;
         //            SetCoefficients(mc, 2.4, 1.05, 2.5, 0.38);
         //            break;
         //    }
@@ -184,7 +274,7 @@ namespace CIS375Final
             mc.d = d;
         }
 
-        public (string, string) GetEstimations(double kloc, ProjectType projectType, ModeCoefficients mc)
+        public (string, string) GetEstimations(double kloc, ModeCoefficients mc)
         {
             double personMonths = mc.a * Math.Pow(kloc, mc.b);
             double months = mc.c * Math.Pow(personMonths, mc.d);
